@@ -216,18 +216,18 @@ class BaseServiceProvider extends ServiceProvider
                 'permissions' => [ACL_ROLE_SUPER_USER],
             ]);
 
-        if (config('core.base.general.enable_system_updater')) {
-            dashboard_menu()
-                ->registerItem([
-                    'id'          => 'cms-core-system-updater',
-                    'priority'    => 999,
-                    'parent_id'   => 'cms-core-platform-administration',
-                    'name'        => 'core/base::system.updater',
-                    'icon'        => null,
-                    'url'         => route('system.updater'),
-                    'permissions' => [ACL_ROLE_SUPER_USER],
-                ]);
-        }
+//        if (config('core.base.general.enable_system_updater')) {
+//            dashboard_menu()
+//                ->registerItem([
+//                    'id'          => 'cms-core-system-updater',
+//                    'priority'    => 999,
+//                    'parent_id'   => 'cms-core-platform-administration',
+//                    'name'        => 'core/base::system.updater',
+//                    'icon'        => null,
+//                    'url'         => route('system.updater'),
+//                    'permissions' => [ACL_ROLE_SUPER_USER],
+//                ]);
+//        }
     }
 
     protected function configureIni()

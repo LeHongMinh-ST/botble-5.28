@@ -45,18 +45,18 @@ Route::group(['namespace' => 'Botble\Base\Http\Controllers', 'middleware' => ['w
             'permission' => 'superuser',
         ]);
 
-        Route::get('system/updater', [
-            'as'         => 'system.updater',
-            'uses'       => 'SystemController@getUpdater',
-            'permission' => 'superuser',
-        ]);
-
-        Route::post('system/updater', [
-            'as'         => 'system.updater.post',
-            'uses'       => 'SystemController@getUpdater',
-            'permission' => 'superuser',
-            'middleware' => 'preventDemo',
-        ]);
+//        Route::get('system/updater', [
+//            'as'         => 'system.updater',
+//            'uses'       => 'SystemController@getUpdater',
+//            'permission' => 'superuser',
+//        ]);
+//
+//        Route::post('system/updater', [
+//            'as'         => 'system.updater.post',
+//            'uses'       => 'SystemController@getUpdater',
+//            'permission' => 'superuser',
+//            'middleware' => 'preventDemo',
+//        ]);
     });
 
     Route::get('settings-language/{alias}', [SystemController::class, 'getLanguage'])->name('settings.language');
